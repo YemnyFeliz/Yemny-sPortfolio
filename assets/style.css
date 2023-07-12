@@ -1,9 +1,15 @@
+
+/* When clicked on the nav, the page scrolls smoothly
+The entire page has the same font-family */
 *{
     margin: 0;
     padding: 0;
+    padding-bottom: 2%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    scroll-behavior: smooth;
 }
 
+/* Inserted a background picture to the entire page */
 body {
     background: url(backg.webp);
     background-position: center;
@@ -12,9 +18,9 @@ body {
     position: relative;
 }
 
+/* the justify content was set to end so the nav appears to the right of the page */
 .header {
     padding: 5px;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     display: flex;
     justify-content: end;
 }
@@ -25,10 +31,11 @@ body {
     font-size: 20px;
 }
 
-.nav ul{
+.nav ul {
     margin-top: -4%;
 }
 
+/* Used inline-block to remove the block default from ul li so they are in the same line */
 .nav ul li{
     list-style: none;
     display: inline-block;
@@ -44,6 +51,8 @@ body {
     margin-top: -3%;
     transition: .4s ease;
 }
+
+/* When hover over the nav, each item changes to a lighter green */
 .nav ul li a:hover{
     color:rgb(32, 185, 32)
 }
@@ -51,8 +60,13 @@ body {
 .hero-container {
     display: flex;
     margin-bottom: 6%;
- /*   justify-content: center; */
 
+}
+
+#name {
+    color:darkgoldenrod;
+    font-size: 50px;
+    margin-bottom: 10%;
 }
 
 
@@ -60,9 +74,13 @@ body {
     max-width: 50%;
     font-size: 28px;
     text-align: left;
-
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+    margin-right: 3%;
 }
 
+/* Added picture */
 .hero-image {
     margin-left: 20px;
     height: 700px;
@@ -74,47 +92,29 @@ body {
     border-radius: 50px;
 }
 
- .hero-text {
-    text-align: center;
- /*   position: absolute;  */
-    color: black;
-    top: 40%;
-    font-size: 28px;
-    margin-bottom: 3em;
-    margin-top: 50px;
- }
-
- /* .title2 {
-    text-align: center;
- } */
-
  h2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 1%;
     font-size: 36px;
-    font-weight: 600px;
-    color: chocolate;
+    font-weight: bold;
+    color:tan
 }
 
 h3 {
+    color:darkseagreen;
     font-size: 28px ;
 }
-
+/* Display is set to inblock so it appears next to the image in desktop web */
  .AboutMe {
     margin-left: 20px;
     display: inline-block;  
  }
 
-
- /* .MyWork {
-    margin-bottom: 200px;
-
- } */
-/* 
- .myworktitle {
-    text-align: center;
- } */
+ .MyWork {
+    margin: 2%;
+ }
     
+ /* The wrap feautures allows images to move to next line instead of continuing the same line out of the page */
 .card {
     margin-left: 2%;
     display: flex;
@@ -123,8 +123,27 @@ h3 {
     position: relative;
  }
 
+ /* Added shadows and opacity to images and captions */
+ .biggerpic {
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    transition: .4s ease;
+ } 
+
+ .biggerpic:hover{
+    opacity: 0.5;  
+ }
+
+ .smallerpic {
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    transition: .4s ease; 
+ }
  
-#bigpic {
+ .smallerpic:hover {
+    opacity: 0.5;
+ }
+
+ /* Made one picture bigger than the others */
+#prework {
     height: 600px;
     width: 800px;
 }
@@ -150,7 +169,6 @@ figcaption {
 
 .ContactMe {
     max-width: 100%;
-    /* margin-top: 150px; */
    text-align: center; 
    display: block;
 }
@@ -169,7 +187,135 @@ figcaption {
 .info {
     font-weight: bold;
 }
+.ContactMe ul li a.github:hover{
+    color:forestgreen;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+}
  
+/* Made the page responsive to different viewports */
 
+@media screen and (max-width: 992px) {
+    /* Changed display to block so the image appears first and then the .textcontent */
+
+
+.hero-container {
+    display: block;
+    }
+
+    /* Adjusted the widht of image and text */
+.hero-image {
+    width: 96%;
+}
+/* Made text adjust to screen */
+.text-content {
+    max-width: 100%;
+    margin-right: 3%;
+    margin-left: 3%;
+} 
+
+.AboutMe {
+    display: inline-block;  
+ }
+
+ /* Center the pictures of my work */
+.card {
+    justify-content: center;
+}
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .hero-image {
+    
+        width: 95%;
+    }
+
+    #prework {
+        height: 600px;
+        width: 95%;
+    }
+    
+
+}
+
+@media screen and (max-width: 600px) {
+    /* Resized images, changed nav color */
+
+    .nav ul li a{
+        color:crimson;
+    }
+    .hero-image {
+    
+        width: 94%;
+    }
+    #prework {
+        height: 500px;
+        width: 95%;
+    } 
+    #horiseonpic, #contactmepic {
+        height: 200px;
+        width: 350px;
+    }
+    
+}
+
+
+@media screen and (max-width: 425px) {
+    /* Changed fonts and re-sized images
+    changed nav color */
+
+    .nav ul li a{
+        font-size: 18px;
+        color:red;
+    }
+
+    .hero-image {
+        height: 500px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .AboutMe {
+        font-size: 20px;
+    }
+
+    .card {
+        justify-content: center;
+     }
+    
+
+    #prework {
+        height: 350px;
+        width: 95%;
+    }
+    
+    #horiseonpic, #contactmepic {
+        height: 200px;
+        width: 70%;
+    }
+    
+    figcaption {
+        width: 90%;
+        font-size: 18px;
+    } 
+
+    .ContactMe ul {
+        font-size: 16px;
+
+    }
+}    
 
  
