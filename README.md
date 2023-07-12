@@ -1,4 +1,4 @@
-# <"Yemny's Portfolio">
+# Yemny's Portfolio
 
 ## Description
 
