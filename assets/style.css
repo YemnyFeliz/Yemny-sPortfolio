@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 
 .header {
     padding: 5px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     display: flex;
     justify-content: end;
 }
@@ -24,18 +25,18 @@ body {
     font-size: 20px;
 }
 
-ul{
+.nav ul{
     margin-top: -4%;
 }
 
-ul li{
+.nav ul li{
     list-style: none;
     display: inline-block;
     padding: 10px 16px;
 
 }
 
-ul li a{
+.nav ul li a{
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
@@ -43,24 +44,28 @@ ul li a{
     margin-top: -3%;
     transition: .4s ease;
 }
-ul li a:hover{
-    color:orangered;
+.nav ul li a:hover{
+    color:rgb(32, 185, 32)
 }
 
 .hero-container {
     display: flex;
-    margin-bottom: 10%;
+    margin-bottom: 6%;
  /*   justify-content: center; */
 
 }
 
+
 .text-content {
+    max-width: 50%;
+    font-size: 28px;
+    text-align: left;
 
 }
 
 .hero-image {
     margin-left: 20px;
-    height: 500px;
+    height: 700px;
     width: 50%;
     margin-bottom: 25px;
     background-image: url(me.JPG);
@@ -79,9 +84,21 @@ ul li a:hover{
     margin-top: 50px;
  }
 
- .title2 {
+ /* .title2 {
     text-align: center;
- }
+ } */
+
+ h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 600px;
+    color: chocolate;
+}
+
+h3 {
+    font-size: 28px ;
+}
 
  .AboutMe {
     margin-left: 20px;
@@ -89,26 +106,27 @@ ul li a:hover{
  }
 
 
- .MyWork {
+ /* .MyWork {
     margin-bottom: 200px;
 
- }
-
+ } */
+/* 
  .myworktitle {
     text-align: center;
- }
+ } */
     
 .card {
+    margin-left: 2%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
  }
 
  
 #bigpic {
-    height: 500px;
-    width: 700px;
+    height: 600px;
+    width: 800px;
 }
 
 
@@ -123,24 +141,34 @@ figure {
 }
 
 figcaption {
-    text-align: center;
+    text-align: left;
     padding: 2px;
     width: 450px;
+    font-size: 20px;
+    margin-top: 1%;
 }
 
 .ContactMe {
     max-width: 100%;
-    margin-top: 150px;
-    width: 100%;
+    /* margin-top: 150px; */
    text-align: center; 
+   display: block;
 }
 
 .ContactMe ul {
-    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    
 }
 
+.ContactMe ul li a {
+    text-decoration: none;
+    color: black;
+}
 
-
+.info {
+    font-weight: bold;
+}
  
 
 
