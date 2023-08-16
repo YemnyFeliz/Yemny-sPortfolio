@@ -11,7 +11,7 @@ The entire page has the same font-family */
 
 /* Inserted a background picture to the entire page */
 body {
-    background: url(backg.webp);
+    background: url(images/backg.webp);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -86,7 +86,7 @@ body {
     height: 700px;
     width: 50%;
     margin-bottom: 25px;
-    background-image: url(me.JPG);
+    background-image: url(images/me.JPG);
     background-size: cover;
     background-position: center;
     border-radius: 50px;
@@ -149,7 +149,7 @@ h3 {
 }
 
 
-#horiseonpic, #contactmepic {
+#horiseonpic, #contactmepic, #dogfinder {
     height: 300px;
     width: 450px;
 }
